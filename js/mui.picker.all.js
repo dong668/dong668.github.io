@@ -528,7 +528,7 @@
 			self.mask.close();
 			document.body.classList.remove($.className('poppicker-active-for-page'));
 			//处理物理返回键
-			$.back=self.__back;
+			$.back = self.__back;
 		},
 		dispose: function() {
 			var self = this;

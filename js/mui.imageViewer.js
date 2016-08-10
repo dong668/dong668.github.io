@@ -24,7 +24,6 @@
 	var enterEventName = touchSupport ? 'tap' : 'click';
 	var imageClassName = $.className('image');
 
-
 	//创建DOM (此函数是否可放在 mui.js 中)
 	$.dom = function(str) {
 		if (!$.__create_dom_div__) {

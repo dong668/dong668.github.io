@@ -1,0 +1,1799 @@
+* {
+	-webkit-user-select: none;
+	-ms-touch-select: none;
+	/*
+	-ms-touch-action: none;
+    */
+}
+
+div,
+html,
+body,
+dl,
+dt,
+dd,
+ul,
+li,
+p,
+h3,
+h4,
+table,
+tbody,
+td,
+tr {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: Arial;
+	font-size: 16px;
+	color: #6c6c6c;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+	background-color: #f6f6f8;
+}
+
+ul,
+li,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+i {
+	font-style: normal;
+}
+
+div {
+	font-size: 0;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.mt3 {
+	margin-top: 0.03rem !important;
+}
+
+.mt5 {
+	margin-top: 0.05rem !important;
+}
+
+.mt10 {
+	margin-top: 0.1rem !important;
+}
+
+.mt12 {
+	margin-top: 0.12rem !important;
+}
+
+.mt15 {
+	margin-top: 0.15rem !important;
+}
+
+.mt20 {
+	margin-top: 0.2rem !important;
+}
+
+.mt30 {
+	margin-top: 0.3rem !important;
+}
+
+.mt54 {
+	margin-top: 0.54rem !important;
+}
+
+.mb32 {
+	margin-bottom: 0.32rem !important;
+}
+
+.c_acacac {
+	color: #acacac !important;
+}
+
+.c_ff7300 {
+	color: #ff7300 !important;
+}
+
+.bpDetailsCon .borderNone {
+	border-bottom: none !important;
+}
+
+.loginHeader {
+	width: 100%;
+	height: 0.44rem;
+	text-align: center;
+	line-height: 44px;
+	background: #042936;
+	z-index: 99;
+	-ms-touch-action: none;
+	font-size: 0.18rem;
+	color: #fff;
+	overflow: hidden;
+}
+
+.content {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	background: url(../images/bg-min.png) no-repeat #042936;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.logo {
+	width: 100%;
+	padding: 0.8rem 0;
+	/*height: 0.8rem;*/
+	/*margin-top: 1.09rem;
+	margin-bottom: 1rem;*/
+}
+
+.logoCon {
+	display: block;
+	width: 1rem;
+	height: 1.09rem;
+	background: url(../images/logo-akmimi.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin: 0 auto;
+}
+
+.loginUsername,
+.loginPassword {
+	width: 65%;
+	margin-left: 17%;
+	border-top: 1px solid #28475f;
+	border-bottom: 1px solid #28475f;
+	padding: 0.13rem 0;
+	overflow: hidden;
+}
+
+.loginUsername i,
+.loginPassword i {
+	display: inline-block;
+	width: 0.36rem;
+	height: 0.36rem;
+	margin-left: 0.11rem;
+}
+
+.loginUsername i {
+	background: url(../images/ico_phone.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.loginPassword i {
+	background: url(../images/ico_psw.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.loginUsername input::-webkit-input-placeholder,
+.loginPassword input::-webkit-input-placeholder {
+	color: #256481;
+}
+
+.loginUsername input,
+.loginPassword input {
+	border: none;
+	width: 60%;
+	height: 0.34rem;
+	background-color: rgba(0, 0, 0, 0);
+	font-size: 0.16rem;
+	color: #fff;
+	line-height: 0.34rem;
+	margin-left: 0.14rem;
+	outline: none;
+	-webkit-user-select: text;
+}
+
+.loginSubmit {
+	display: block;
+	width: 65%;
+	height: 7%;
+	background-color: #06a863;
+	color: #fff;
+	font-size: 0.18rem;
+	text-align: center;
+	padding: 0.17rem 0 0.15rem;
+	margin-left: 17%;
+	margin-top: 0.75rem;
+}
+
+.loginFooter {
+	width: 100%;
+	text-align: center;
+	margin-top: 0.464rem;
+}
+
+.loginFooter span {
+	display: block;
+	width: 100%;
+	height: 0.18rem;
+	line-height: 0.18rem;
+	font-size: 0.12rem;
+	color: #868686;
+}
+
+
+/*员工端－首页开始*/
+
+.indexUser,
+.indexNews {
+	display: inline-block;
+	width: 0.24rem;
+	height: 0.24rem;
+	margin-top: 0.12rem;
+}
+
+.indexUser {
+	background: url(../images/ico_user.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin-left: 0.16rem;
+}
+
+@media screen and (max-width:414px) {
+	.indexUser,
+	.indexNews {
+		margin-top: 0.08rem;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.indexUser,
+	.indexNews {
+		margin-top: 0.12rem;
+	}
+}
+
+.indexNews {
+	background: url(../images/ico_news.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin-right: 0.16rem;
+}
+
+.employeeLocation {
+	width: 100%;
+	background-color: #042936;
+	padding-top: 0.11rem;
+	margin-top: -0.01rem;
+}
+
+.employeeLocation span {
+	display: block;
+	width: 100%;
+	font-size: 0.14rem;
+	font-weight: normal;
+	text-align: center;
+	color: #ffffff;
+	/*padding-top: 0.1rem;*/
+}
+
+.bpDetailsCon dt input {
+	margin: 0;
+	font-size: 0.12rem;
+	padding: 0.03rem 0.08rem;
+	background-color: #06a863;
+	border: none;
+	border-radius: 0.04rem;
+	margin-right: 0.1rem;
+	color: #FFFFFF;
+	outline: none;
+	-webkit-user-select: text;
+}
+
+.employeeLocation b {
+	display: block;
+	width: 100%;
+	font-size: 0.12rem;
+	font-weight: normal;
+	text-align: center;
+	color: #ffffff;
+	padding: 0.08rem 0 0.13rem;
+	position: relative;
+}
+
+.indexAddress {
+	display: inline-block;
+	width: 0.12rem;
+	height: 0.16rem;
+	background: url(../images/ico_location.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	position: absolute;
+	top: 0.11rem;
+	left: 0.9rem;
+}
+
+@media screen and (max-width:320px) {
+	.indexAddress {
+		top: 0.08rem;
+		left: 0.1rem;
+	}
+}
+
+.orderStatus1 {
+	width: 100%;
+	background-color: #f6f6f8;
+	overflow: hidden;
+}
+
+.orderStatus1 dl dd .icoEditor {
+	display: inline-block;
+	width: 0.16rem;
+	height: 0.16rem;
+	background: url(../images/ico_order_edit.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin-right: 0.16rem;
+	position: relative;
+}
+
+.orderStatusCon,
+.bpDetailsCon {
+	width: 90%;
+	padding: 2% 5% 5%;
+	background-color: #fff;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border: 1px solid #d8d8d8;
+	margin: 0 auto;
+}
+
+.orderStatusCon dt {
+	overflow: hidden;
+	border-bottom: 1px dotted #979797;
+	padding-bottom: 0.08rem;
+}
+
+.bpdetails {
+	display: block;
+	width: 0.12rem;
+	height: 0.21rem;
+	background: url(../images/BackArrow.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin: 0.1rem 0.06rem 0 0.09rem;
+}
+
+.bpDetailsCon {
+	position: relative;
+	padding: 2% 5% 0;
+}
+
+.bpDetailsCon dt {
+	width: 95%;
+	padding-left: 5%;
+	font-size: 0.14rem;
+	font-weight: 500;
+	color: #000000;
+	border-bottom: 1px solid #979797;
+	padding-bottom: 0.08rem;
+	position: absolute;
+	font-weight: bold;
+	left: 0;
+}
+
+.borderBot_e2e2e2 dt {
+	border-bottom: 1px solid #e2e2e2 !important;
+}
+
+.borderBot_e2e2e2 dd {
+	border-bottom: 1px dotted #e2e2e2 !important;
+}
+
+.bpDetailsCon dd {
+	font-size: 0.16rem;
+	font-weight: normal;
+	color: #484848;
+	padding: 0.145rem 0;
+	border-bottom: 1px dotted #979797;
+	overflow: hidden;
+}
+
+.bpDetailsCon dd span {
+	color: #fe6f6f;
+}
+
+.bpDetailsCon dd i {
+	display: inline-block;
+	width: 72%;
+	font-style: normal;
+	/*margin-top: -0.18rem;*/
+}
+
+.bpDetailsCon dd b {
+	font-weight: normal;
+	color: #484848;
+}
+
+.orderStatusCon dt span {
+	font-size: 0.18rem;
+	font-weight: 500;
+	color: #fd6c51;
+}
+
+.orderStatusCon dt b {
+	font-size: 0.12rem;
+	font-weight: normal;
+	text-align: center;
+	color: #484848;
+}
+
+.orderStatusCon dd {
+	font-size: 0.14rem;
+	font-weight: normal;
+	color: #484848;
+	margin-top: 0.1rem;
+}
+
+.orderStatusCon dd span {
+	color: #06c15a;
+	border-bottom: 1px dotted #06c15a;
+}
+
+.userInfoIndex {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.userInfoIndexCon {
+	width: 77%;
+	height: 54%;
+	background-color: #FFFFFF;
+	margin: 1.6rem auto;
+	border-radius: 10px;
+}
+
+.userHeader {
+	clear: both;
+	display: block;
+	width: 0.54rem;
+	height: 0.54rem;
+	background: url(../images/ico_user.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin: 0.16rem auto;
+}
+
+.userInfoIndexCon span {
+	display: block;
+	width: 100%;
+	font-size: 0.14rem;
+	font-weight: normal;
+	text-align: center;
+	color: #484848;
+	margin-bottom: 0.1rem;
+}
+
+.checkHistoryOrder {
+	display: block;
+	width: 70%;
+	height: 0.4rem;
+	margin: 0 auto;
+	border-radius: 2px;
+	background-color: #06a863;
+	font-size: 0.16rem;
+	font-weight: normal;
+	text-align: center;
+	color: #ffffff;
+	line-height: 0.4rem;
+	margin-top: 0.6rem;
+}
+
+.exitBtn {
+	display: block;
+	width: 70%;
+	height: 0.4rem;
+	margin: 0 auto;
+	border-radius: 2px;
+	background-color: #fe6f6f;
+	font-size: 0.16rem;
+	font-weight: normal;
+	text-align: center;
+	color: #ffffff;
+	line-height: 0.4rem;
+	margin-top: 1rem;
+}
+
+.addHistoryOrder {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	font-size: 0.14rem;
+	color: #484848;
+	padding: 0.18rem 0 0;
+	background: #000000;
+}
+
+.addHistoryOrder span:nth-child(1) {
+	position: absolute;
+	left: 0.8rem;
+	top: 0.8rem;
+	width: 0.64rem;
+	height: 1px;
+	background-color: #d8d8d8;
+}
+
+.addHistoryOrder span:nth-child(2) {
+	position: absolute;
+	right: 0.8rem;
+	top: 0.8rem width: 0.64rem;
+	height: 1px;
+	background-color: #d8d8d8;
+}
+
+
+/*员工端－首页结束*/
+
+
+/*钣喷订单详情开始*/
+
+.bpOrderDetails {
+	width: 100%;
+	position: relative;
+}
+
+.changeStatus,
+.bpEwm {
+	display: block;
+	/*text-align: center;*/
+	width: 100%;
+	padding: 0.17rem 0;
+	background-color: #06a863;
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font-size: 0.18rem;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.changeStatusMask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.changeStatusMaskCon {
+	width: 72%;
+	height: 1.6rem;
+	margin-left: 14%;
+	margin-top: 60%;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	background-color: #ffffff;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	overflow: hidden;
+}
+
+.changeStatusMaskCon span {
+	display: block;
+	width: 100%;
+	font-size: 0.17rem;
+	letter-spacing: -0.4px;
+	text-align: center;
+	color: #030303;
+}
+
+.changeStatusMaskCon i {
+	display: block;
+	width: 100%;
+	font-size: 0.13rem;
+	letter-spacing: -0.1px;
+	text-align: center;
+	color: #030303;
+	margin-top: 0.28rem;
+	font-style: normal;
+}
+
+.changeStatusSel {
+	width: 100%;
+	border-top: 1px solid #d8d8d8;
+	margin-top: 0.32rem;
+}
+
+.changeStatusMaskCon .changeStatusSel span {
+	display: inline-block;
+	width: 49%;
+	height: 0.44rem;
+	font-size: 0.17rem;
+	letter-spacing: -0.4px;
+	text-align: center;
+	color: #0076ff;
+	margin-top: 0;
+	line-height: 0.44rem;
+}
+
+.bpEwmMask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.bpEwmMaskCon {
+	width: 77%;
+	height: 34%;
+	margin-left: 11%;
+	margin-top: 24%;
+	background-color: #ffffff;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	overflow: hidden;
+}
+
+.bpCloseEwm {
+	display: block;
+	width: 0.21rem;
+	height: 0.21rem;
+	background: url(../images/ico_close.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	float: right;
+	margin-right: 0.12rem;
+	margin-top: 0.12rem;
+}
+
+.bpWechat {
+	clear: both;
+	display: block;
+	width: 1.12rem;
+	height: 0.32rem;
+	background: url(../images/logo_wxpay.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin: 0 auto;
+	margin-top: 0.07rem;
+}
+
+.bpEwmreal {
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	/*background: url(../images/ewm1.png) no-repeat;*/
+	background-size: cover;
+	-webkit-background-size: cover;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 0.15rem;
+}
+
+.wechatRight {
+	display: block;
+	width: 0.6rem;
+	height: 0.6rem;
+	/*background: url(../images/pic_wx.png) no-repeat;*/
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin: 0 auto;
+	margin-top: 0.7rem;
+}
+
+.zfbPayOnline {
+	display: block;
+	width: 100%;
+	font-size: 0.14rem;
+	text-align: center;
+	color: #06a863;
+	margin-top: 0.12rem;
+}
+
+.changeMark {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.changeMarkCon {
+	width: 77%;
+	height: 34%;
+	border-radius: 10px;
+	background-color: #ffffff;
+	margin: 1.6rem auto;
+	position: relative;
+}
+
+.changeMarkTitle {
+	clear: both;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 0.18rem;
+	font-weight: normal;
+	color: #484848;
+	float: left;
+	margin-top: -0.15rem;
+	margin-bottom: 0.15rem;
+}
+
+.changeMarkLine {
+	display: block;
+	clear: both;
+	width: 75%;
+	height: 2px;
+	background-color: #e2e2e2;
+	margin: 0 auto 0.175rem;
+}
+
+.changeMarkAddress {
+	display: block;
+	width: 75%;
+	height: 58%;
+	margin: 0 auto;
+	font-size: 0.16rem;
+	font-weight: normal;
+	color: #484848;
+}
+
+.changeMarkSel {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.changeMarkCancle {
+	display: inline-block;
+	width: 40.5%;
+	height: 0.34rem;
+	border-radius: 2px;
+	border: solid 1px #06a863;
+	background-color: #FFFFFF;
+	margin: 0 3% 0.25rem 7%;
+	font-size: 0.16rem;
+	font-weight: normal;
+	color: #06a863;
+	text-align: center;
+	line-height: 0.34rem;
+	float: left;
+}
+
+.changeMarkSave {
+	display: inline-block;
+	width: 40.5%;
+	height: 0.34rem;
+	border-radius: 2px;
+	border: solid 1px #06a863;
+	background-color: #06a863;
+	margin: 0 7% 7% 0;
+	font-size: 0.16rem;
+	font-weight: normal;
+	color: #ffffff;
+	text-align: center;
+	line-height: 0.34rem;
+	float: right;
+}
+
+
+/*钣喷订单详情结束*/
+
+
+/*钣喷订单列表开始*/
+
+
+/*--------------------钣喷订单列表开始 －－－------------------------*/
+
+.byOrderList .u_topmenu {
+	height: 0.48rem !important;
+	border-bottom: 1px solid #dcdee3;
+	z-index: 1000;
+}
+
+.u_topmenu .slider_wrap.line {
+	overflow: hidden;
+	overflow-x: scroll;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+	line-height: 0.48rem;
+	background-color: #FFFFFF;
+}
+
+.u_topmenu .slider_wrap.line .item_cell {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	font-size: 0.12rem;
+}
+
+.u_topmenu .slider_wrap.box {
+	overflow: hidden;
+	width: 100%;
+}
+
+.ml20 {
+	margin-left: 0.2rem;
+}
+
+.mr20 {
+	margin-right: 0.2rem;
+}
+
+.u_topmenu .slider_wrap.box .item_cell {
+	float: left;
+	width: 20%;
+	height: .32rem;
+}
+
+.u_topmenu .slider_wrap.box .item_cell span {
+	font-size: .28rem;
+}
+
+.u_topmenu .slider_wrap.box .item_cellspan {
+	font-size: .3rem;
+	margin-left: -0.08rem;
+}
+
+.u_topmenu .slider_wrap::-webkit-scrollbar {
+	display: none;
+}
+
+.u_topmenu .u_c_items {
+	white-space: nowrap;
+	line-height: 0.48rem;
+}
+
+.u_topmenu .u_c_items span {
+	color: #555;
+	line-height: 0.48rem;
+	white-space: nowrap;
+	display: block;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	text-align: center;
+	/*cursor: pointer;*/
+}
+
+.u_topmenu .u_c_items span:active {
+	color: #2dc769;
+	font-size: 0.16rem;
+}
+
+.u_topmenu .u_c_items .current span,
+.u_topmenu .u_c_items .current a:visited,
+.u_topmenu .u_c_items .current a:link,
+.u_topmenu .u_c_items .current a:hover,
+.u_topmenu .u_c_items .current a:focus {
+	color: #2dc769;
+	font-size: 0.14rem;
+}
+
+.u_topmenu .slider_wrap .spanClick {
+	color: #2dc769;
+	font-size: 0.14rem;
+}
+
+.u_topmenu .u_c_more {
+	width: 15%;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	text-align: center;
+	position: absolute;
+	bottom: 1px;
+	right: 0;
+}
+
+.u_c_items {
+	font-size: 0.34rem;
+}
+
+.item_cell {
+	margin-left: 0.42rem;
+}
+
+.u_topmenu .u_c_more .more_channel {
+	display: inline-block;
+}
+
+.u_topmenu .u_c_more .more_channel.up:after {
+	font-family: 'iconfont';
+	font-size: .16rem;
+	color: #555;
+	display: inline-block;
+}
+
+.u_topmenu .u_c_more .more_channel.up.has_dot:before {
+	color: red;
+	display: block;
+	position: absolute;
+	top: -0.05rem;
+	right: 0.25rem;
+	font-size: 0.1rem;
+}
+
+.u_topmenu .u_c_more .more_channel.down:after {
+	font-family: 'iconfont';
+	font-size: 0.14rem;
+	color: #555;
+	display: inline-block;
+	content: "\e60d";
+}
+
+.u_topmenu_child {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	background: #fff;
+	padding-top: .82rem;
+	z-index: 0;
+	max-width: 1080px;
+	opacity: 1;
+	top: 0;
+	color: #e8e8e8;
+}
+
+.u_topmenu_child .slider_child {
+	width: 92%;
+	margin-left: 4%;
+	-webkit-overflow-scrolling: touch;
+	display: none;
+}
+
+.u_topmenu_child .slider_child.current {
+	display: block;
+}
+
+.u_topmenu_child .scroll_wrap_child {
+	overflow: hidden;
+	overflow-x: scroll;
+	width: 100%;
+	margin-left: 0;
+	-webkit-overflow-scrolling: touch;
+}
+
+.u_topmenu_child .scroll_wrap_child .item_cell {
+	display: inline-block;
+	height: .82rem;
+	margin: 0 .35rem;
+	color: #999;
+}
+
+.u_topmenu_child .scroll_wrap_child .item_cell:first-child {
+	margin: 0 .35rem 0 0;
+}
+
+.u_topmenu_child .scroll_wrap_child::-webkit-scrollbar {
+	display: none;
+}
+
+
+/*---------------------保养订单列表开始-----------------------------*/
+
+.byOrderList {
+	width: 100%;
+	min-height: 100%;
+	background-color: #f6f6f8;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.byOrderListCon {
+	overflow-x: scroll;
+	border-bottom: 1px solid #dcdee3;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+.byOrderList .byOrderListCon li {
+	float: left;
+	font-size: 0;
+	color: #484848;
+	padding: 0.17rem 0.24rem 0.17rem 0;
+	font-size: 0.14rem;
+	background-color: #FFFFFF;
+}
+
+.byOrderList .byOrderListCon .c06a863 {
+	color: #06a863;
+	font-size: 0.16rem;
+	padding: 0.15rem 0.2rem 0.17rem 0.2rem;
+}
+
+.aboutOrder {
+	width: 100%;
+	/*	position: absolute;
+	left: 0;
+	top: 0.48rem;*/
+	margin-top: 0.1rem;
+	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #e2e2e2;
+	background-color: #FFFFFF;
+}
+
+.aboutOrder1 {
+	clear: both;
+	width: 100%;
+	margin-top: 0.1rem;
+	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #e2e2e2;
+	background-color: #FFFFFF;
+}
+
+.orderNum {
+	padding: 0.11rem 0.1rem;
+	color: #484848;
+	font-size: 0.14rem;
+	overflow: hidden;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.orderNum span {
+	color: #868686;
+}
+
+.orderBrand {
+	width: 100%;
+	color: #868686;
+	font-size: 0.14rem;
+	overflow: hidden;
+}
+
+.carMantain {
+	width: 0.64rem;
+	font-size: 0;
+}
+
+.carMantain i {
+	display: block;
+	width: 0.54rem;
+	height: 0.54rem;
+	margin-bottom: 0.04rem;
+	background: url(../images/img_order_default.png) no-repeat center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.carMantain .picCushion {
+	display: block;
+	width: 0.56rem;
+	height: 0.56rem;
+	margin-bottom: 0.04rem;
+	background: url(../images/pic-cushion-copy@2x.png) no-repeat center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.carMantain span {
+	color: #868686;
+	font-size: 0.12rem;
+	margin-left: 0.03rem;
+}
+
+.seriesAndS {
+	height: 100%;
+	width: 2.35rem;
+}
+
+.seriesAndS i {
+	display: block;
+	width: 100%;
+	height: 0.27rem;
+	line-height: 0.27rem;
+	font-size: 0.14rem;
+	color: #484848;
+}
+
+.textElli {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.waitPhone {
+	color: #06a863;
+	font-size: 0.14rem;
+	text-decoration: underline;
+}
+
+.orderBrand {
+	width: 97.5%;
+	font-size: 0;
+	padding: 0.06rem 0 0.06rem 0.1rem;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.orderD {
+	overflow: hidden;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.orderD .orderStatus {
+	border: none;
+}
+
+.orderStatus {
+	padding: 0.13rem 0.1rem 0.13rem 0.1rem;
+	overflow: hidden;
+	font-size: 0.14rem;
+	text-align: right;
+	color: #000000;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.orderStatus span {
+	color: #ff6464;
+}
+
+.cancelBtnOrder {
+	width: 95.4%;
+	padding: 0.1rem;
+	text-align: right;
+	font-size: 0;
+}
+
+.cancelBtnOrder button {
+	font-size: 0.14rem;
+	padding: 0.07rem 0.22rem;
+	border: 1px solid #868686;
+	color: #484848;
+	border-radius: 2px;
+	background-color: #FFFFFF;
+}
+
+
+/*---------------------保养订单列表结束-----------------------------*/
+
+.byOrderList .wrapper {
+	position: absolute;
+	left: 0;
+	top: 0.48rem;
+}
+
+.carMantain .picRepair {
+	display: block;
+	width: 0.56rem;
+	height: 0.56rem;
+	margin-bottom: 0.04rem;
+	background: url(../images/pic-repair@2x.png) no-repeat center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.aboutOrderBot {
+	width: 100%;
+	height: 0.5rem;
+}
+
+.iconEditorWhite,
+.icoEwmImg {
+	display: inline-block;
+	width: 0.16rem;
+	height: 0.16rem;
+	margin-right: 0.05rem;
+	float: left;
+	margin-left: 33%;
+	margin-top: 0.03rem;
+}
+
+.iconEditorWhite {
+	background: url(../images/ico_edit.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.icoEwmImg {
+	background: url(../images/ico_code.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+
+
+/*--------------------钣喷订单列表结束 －－－------------------------*/
+
+
+/*钣喷订单列表结束*/
+
+
+/*保养订单详情开始*/
+
+.icoEditor {
+	display: inline-block;
+	width: 0.16rem;
+	height: 0.16rem;
+	background: url(../images/ico_order_edit.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin-right: 0.16rem;
+}
+
+
+/*保养订单详情结束*/
+
+
+/*保养订单详情修改商品开始*/
+
+.changesGoodsContent {
+	width: 100%;
+}
+
+.changesGoodsContentTop {
+	width: 100%;
+	background-color: #f6f6f8;
+	padding-bottom: 0.6rem;
+}
+
+.goodsList,
+.goodsListFirst {
+	width: 100%;
+	overflow: hidden;
+}
+
+.goodsListLeft,
+.goodsListFirstLeft {
+	width: 8%;
+	height: 0.4rem;
+}
+
+.goodsListLeft p,
+.goodsListFirstLeft p {
+	width: 0.2rem;
+	height: 0.2rem;
+	background-color: #ff6464;
+	color: #FFFFFF;
+	font-size: 0.2rem;
+	line-height: 0.2rem;
+	text-align: center;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	margin: 0 auto;
+	margin-top: 0.1rem;
+}
+
+.goodsListRight,
+.goodsListFirstRight {
+	width: 91%;
+	border-left: 1px solid #d8d8d8;
+	font-size: 0.12rem;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #d8d8d8;
+	-webkit-user-select: text;
+}
+
+.goodsListRight li {
+	float: left;
+	width: 14.85%;
+	border-right: 1px solid #d8d8d8;
+	text-align: center;
+	color: #000000;
+	-webkit-user-select: text;
+}
+
+.goodsListRight li input {
+	width: 100%;
+	border: none;
+	padding: 0.13rem 0;
+	text-align: center;
+	color: #000000;
+	outline: none;
+	font-size: 0.12rem;
+	-webkit-user-select: text;
+}
+
+.goodsListFirstRight li {
+	float: left;
+	width: 10%;
+	border-right: 1px solid #d8d8d8;
+	padding: 0.058rem 0.083rem;
+	text-align: center;
+	color: #000000;
+}
+
+@media screen and (width:320px) {
+	.goodsListRight li {
+		width: 14.81%;
+	}
+	.goodsListFirstRight li {
+		float: left;
+		width: 10%;
+		border-right: 1px solid #d8d8d8;
+		padding: 0.05rem 0.082rem;
+		text-align: center;
+		color: #000000;
+	}
+}
+
+.goodsListRight li:nth-child(1) {
+	width: 24%;
+	padding: 0.13rem 0;
+}
+
+.goodsListFirstRight li:nth-child(1) {
+	width: 24%;
+	padding: 0.13rem 0;
+}
+
+.goodsListRight li:nth-child(2) {
+	width: 15%;
+	text-align: center;
+}
+
+.goodsListRight li:nth-child(2) input {
+	width: 100%;
+	text-align: center;
+	padding: 0.13rem 0;
+}
+
+.goodsListFirstRight li:nth-child(2) {
+	width: 15%;
+	text-align: center;
+	padding: 0.13rem 0;
+}
+
+.goodsListRight li:nth-child(6) {
+	border-right: none;
+}
+
+.goodsListFirstRight li:nth-child(6) {
+	border-right: none;
+}
+
+.addNewGoods {
+	display: block;
+	width: 1.6rem;
+	height: 0.39rem;
+	border-radius: 3px;
+	border: dotted 1px #06a863;
+	font-size: 0.16rem;
+	color: #06c15a;
+	line-height: 0.39rem;
+	text-align: center;
+	margin: 0.36rem auto 0;
+}
+
+.changesGoodsContentBottom {
+	width: 100%;
+}
+
+.changesGoodsContentBottom p {
+	width: 100%;
+	padding: 0.13rem 0;
+	background-color: #ececec;
+	border-top: solid 1px #d8d8d8;
+	font-size: 0.14rem;
+	text-align: center;
+	color: #000000;
+}
+
+.byItems {
+	width: 100%;
+	background-color: #d8d8d8;
+}
+
+
+/*保养订单详情修改商品结束*/
+
+.byItems tr {
+	border-bottom: 1px solid #d8d8d8 !important;
+	z-index: 999;
+}
+
+.byItems tr,
+.byItems tr:nth-child(1) {
+	width: 91%;
+	font-size: 0.12rem;
+	background-color: #F6f6f8;
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.byItems tr td {
+	float: left;
+	width: 14.85%;
+	border-right: 1px solid #d8d8d8;
+	text-align: center;
+	color: #000000;
+}
+
+.byItems tr td {
+	width: 14.85%;
+	padding: 0.12rem 0;
+	text-align: center;
+	color: #000000;
+	outline: none;
+	font-size: 0.12rem;
+	border-right: 1px solid #d8d8d8;
+}
+
+.byItems tr:nth-child(1) td {
+	float: left;
+	width: 9%;
+	border-right: 1px solid #d8d8d8;
+	padding: 0.058rem 0.109rem;
+	text-align: center;
+	color: #000000;
+}
+
+@media screen and (width:320px) {
+	.byItems tr td {
+		width: 14.81%;
+	}
+	.goodsListFirstRight td {
+		float: left;
+		width: 10%;
+		border-right: 1px solid #d8d8d8;
+		padding: 0.05rem 0.082rem;
+		text-align: center;
+		color: #000000;
+	}
+	.byItems tr:nth-child(1) td {
+		float: left;
+		width: 8.92%;
+		border-right: 1px solid #d8d8d8;
+		padding: 0.058rem 0.109rem;
+		text-align: center;
+		color: #000000;
+	}
+}
+
+.byItems tr td:nth-child(1) {
+	width: 24%;
+	padding: 0.13rem 0;
+}
+
+.byItems tr:nth-child(1) td:nth-child(1) {
+	width: 24%;
+	padding: 0.13rem 0;
+}
+
+.byItems tr td:nth-child(2) {
+	width: 15%;
+	text-align: center;
+}
+
+.byItems tr:nth-child(1) td:nth-child(2) {
+	width: 15%;
+	text-align: center;
+	padding: 0.13rem 0;
+}
+
+.byItems tr li:nth-child(6) {
+	border-right: none;
+}
+
+.byItems tr:nth-child(1) td:nth-child(6) {
+	border-right: none;
+}
+
+
+/*员工端－消息列表开始*/
+
+.news {
+	width: 94%;
+	padding: 0.12rem 3% 0.13rem;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.news dt .notice {
+	display: inline-block;
+	width: 0.35rem;
+	height: 0.35rem;
+	background: url(../images/ico-creditcard@2x.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	position: relative;
+}
+
+.news dt .notice b {
+	display: inline-block;
+	width: 0.1rem;
+	height: 0.1rem;
+	background-color: #ff7300;
+	border-radius: 50%;
+	position: absolute;
+	right: -0.03rem;
+	top: -0.03rem;
+}
+
+.news dd {
+	width: 89%;
+	font-size: 0;
+	overflow: hidden;
+	color: #484848;
+}
+
+.noticeCon {
+	width: 70%;
+	display: inline-block;
+	margin-left: 0.08rem;
+}
+
+.noticeCon h3 {
+	font-size: 0.18rem;
+	font-weight: normal;
+	line-height: 1;
+}
+
+.noticeCon h4 {
+	width: 100%;
+	font-size: 0.14rem;
+	font-weight: normal;
+	line-height: 1;
+	margin-top: 0.03rem;
+}
+
+.news dd span {
+	display: inline-block;
+	width: 26%;
+	font-size: 0.16rem;
+	font-weight: normal;
+	text-align: right;
+	margin-top: 0.095rem;
+}
+
+.txtELlipse {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/*员工端－消息列表结束*/
+
+
+/*员工端－消息列表详情开始*/
+
+.noticeList,
+.noticeContent {
+	width: 86%;
+	margin-left: 3%;
+	border-radius: 6px;
+	background-color: #ffffff;
+	border: solid 0.5px #d8d8d8;
+	padding: 2% 4%;
+	margin-top: 0.1rem;
+}
+
+.noticeList li {
+	overflow: hidden;
+	color: #484848;
+	font-size: 0.16rem;
+}
+
+.noticeList li b {
+	font-weight: normal;
+}
+
+.noticeContent h3 {
+	width: 100%;
+	font-size: 0.18rem;
+	font-weight: normal;
+	color: #484848;
+}
+
+.noticeContent h4 {
+	width: 100%;
+	font-size: 0.16rem;
+	font-weight: normal;
+	color: #484848;
+	line-height: 0.24rem;
+	margin-top: 0.09rem;
+}
+
+.addHistoryOrder {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	font-size: 0.14rem;
+	color: #484848;
+	margin: 0.18rem 0 0.15rem;
+}
+
+.addHistoryOrder span:nth-child(1) {
+	position: absolute;
+	left: 0.8rem;
+	top: 0.08rem;
+	width: 0.64rem;
+	height: 2px;
+	background-color: #d8d8d8;
+}
+
+.addHistoryOrder span:nth-child(2) {
+	position: absolute;
+	right: 0.8rem;
+	top: 0.08rem;
+	width: 0.64rem;
+	height: 2px;
+	background-color: #d8d8d8;
+}
+
+.indexNoOrder {
+	width: 100%;
+	height: 100%;
+}
+
+.indexNoOrder div {
+	margin: 1.3rem auto 0.2rem;
+	width: 0.9rem;
+	height: 1.2rem;
+}
+
+.indexNoOrder div img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.indexNoOrder p {
+	width: 100%;
+	font-size: 0.18rem;
+	text-align: center;
+	color: #acacac;
+}
+
+
+/*员工端－首页－没有订单结束*/
+
+
+/*员工端－支付成功开始*/
+
+.ygpaySucceed {
+	width: 100%;
+	min-height: 100%;
+	background-color: #f6f6f8;
+}
+
+.commitSucceedyg {
+	width: 100%;
+	margin: 0.7rem 0 0.2rem;
+}
+
+.commitSucceedygCon {
+	display: block;
+	margin: 0 auto;
+	width: 1rem;
+	height: 1rem;
+	background: url(../images/commit-successed.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.ygpaySucceed p {
+	font-size: 0.18rem;
+	font-weight: normal;
+	text-align: center;
+	color: #042936;
+	margin-top: 0.1rem;
+	line-height: 0.18rem;
+}
+
+.payOrderyg {
+	width: 100%;
+	text-align: center;
+	margin: 0.55rem 0 0.2rem;
+}
+
+.payOrderyg span {
+	display: inline-block;
+	width: 0.47rem;
+	height: 1px;
+	background-color: #042936;
+	margin-bottom: 0.04rem;
+}
+
+.payOrderyg p {
+	display: inline-block;
+	font-size: 0.14rem;
+	font-weight: normal;
+	text-align: center;
+	color: #042936;
+	margin: 0 0.09rem;
+}
+
+.payMoneyyg {
+	width: 100%;
+	text-align: center;
+}
+
+.payMoneyyg span {
+	font-size: 0.2rem;
+	font-weight: normal;
+	text-align: center;
+	color: #042936;
+}
+
+.payMoneyyg b {
+	font-size: 0.5rem;
+	font-weight: 100;
+	text-align: center;
+	color: #042936;
+}
+
+.backIndex {
+	width: 100%;
+}
+
+.backIndex a {
+	display: block;
+	width: 2.54rem;
+	height: 0.5rem;
+	background-color: #06a863;
+	font-size: 0.18rem;
+	font-weight: normal;
+	line-height: 0.5rem;
+	text-align: center;
+	color: #ffffff;
+	margin: 0.8rem auto 0;
+}
+
+
+/*员工端－支付成功结束*/
+
+
+/*员工端－保养订单详情修改开始*/
+
+.totalPriceYg {
+	width: 100%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	border-top: 1px solid #e2e2e2;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-color: #FFFFFF;
+}
+
+.totalPriceYg span {
+	display: inline-block;
+	width: 65%;
+	height: 99%;
+	color: #484848;
+	font-size: 0.18rem;
+	padding-left: 3%;
+}
+
+.totalPriceYg span b {
+	font-weight: normal;
+	color: #fd6c51;
+}
+
+.newBpEwm {
+	display: inline-block;
+	width: 32%;
+	height: 100%;
+	background-color: #06a863;
+	color: #FFFFFF;
+	font-size: 0.18rem;
+	text-align: center;
+}
+
+
+/*员工端－保养订单详情修改结束*/

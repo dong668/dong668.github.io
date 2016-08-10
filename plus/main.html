@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+
+		<script type="text/javascript" src="../utilsJs/constant.js"></script>
+		<script type="text/javascript" src="../utilsJs/sha1.js"></script>
+		<script type="text/javascript" src="../utilsJs/map.js"></script>
+		<script type="text/javascript" src="../utilsJs/httpUtils.js"></script>
+		<script type="text/javascript" src="../utilsJs/utils.js"></script>
+		<script type="text/javascript" src="../utilsJs/dpHttp.js"></script>
+		<script type="text/javascript" src="../utilsJs/layer.js"></script>
+		<script type="text/javascript" src="../utilsJs/push.js"></script>
+		<script type="text/javascript" src="../utilsJs/showView.js"></script>
+		<script type="text/javascript" src="../utilsJs/websql.js"></script>
+
+		<link rel="stylesheet" href="../css/app.css" />
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link id="android" rel="stylesheet" type="text/css" charset="utf-8" href="../css/style.css" />
+	</head>
+
+	<body>
+		<div class="mainHeader">
+			<header class="loginHeader">
+				<i id="logout" class="indexUser left"></i> 接送车司机
+				<!--<i id="messageList" class="indexNews right"></i>-->
+			</header>
+			<div class="employeeLocation mt44">
+				<span id="userInfo">无</span>
+				<b id="address"><i class="indexAddress"></i>无</b>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + "px";
+		window.httpUtils = new HttpUtils({
+			host: "http://addev.mimixiche.cn"
+		});
+		window.dpHttp = null;
+		window.pushUtil = new Push();
+		var ordersArray = new Array();
+		var utils = null;
+		var userInfo = null;
+		var address = null;
+
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + "px";
+		if(window.plus) {
+			plusReady();
+		} else {
+			document.addEventListener("plusready", plusReady, false);
+		}
+
+		function plusReady() {
+			switch(plus.os.name) {
+				case "Android":
+					$('#android').attr('href', '../css/style.css');
+					break;
+				case "iOS":
+					$('#android').attr('href', '../css/ios.css');
+					$(".loginHeader").css({
+						"margin-bottom": '0px',
+						"height": '0.44rem'
+					})
+					break;
+			}
+			utils = new Utils();
+			userInfo = document.getElementById('userInfo');
+			address = document.getElementById('address');
+			var user = httpUtils.getUserInfo();
+			userInfo.innerText = user.name + '：' + user.mobile;
+			newAddress();
+			document.getElementById('logout').addEventListener('tap', function() {
+				var orderList = plus.webview.getWebviewById('orderList');
+				if(orderList) {
+					mui.fire(orderList, 'logout');
+				}
+			});
+			//			document.getElementById('messageList').addEventListener('tap', function() {
+			//				//				mui.openWindow({
+			//				//					url: 'message.html',
+			//				//					id: 'message',
+			//				//					popGesture: 'close',
+			//				//					createNew: false, //是否重复创建同样id的webview，默认为false:不重复创建，直接显示
+			//				//					show: {
+			//				//						autoShow: true, //页面loaded事件发生后自动显示，默认为true
+			//				//						aniShow: "slide-in-right", //页面显示动画，默认为”slide-in-right“；
+			//				//					},
+			//				//					waiting: {
+			//				//						autoShow: true, //自动显示等待框，默认为true
+			//				//						title: '正在加载...', //等待对话框上显示的提示内容
+			//				//					}
+			//				//				});
+			//
+			//			});
+			pushUtil.pushListener();
+			dpHttp = new DpHttp(utils, httpUtils);
+			dpHttp.isReportPushCid();
+		}
+
+		window.addEventListener('newAddress', newAddress);
+
+		function newAddress() {
+			utils.getAddress(function(addresses) {
+				address.innerHTML = addresses + '<i class="indexAddress"></i>';
+			});
+		}
+
+		var mainHeaderHeight = $(".mainHeader").height();
+		//启用双击监听
+		mui.init({
+			subpages: [{
+				url: 'orderList.html',
+				id: 'orderList',
+				styles: {
+					top: mainHeaderHeight,
+					bottom: '0px',
+				}
+			}]
+		});
+	</script>
+
+</html>

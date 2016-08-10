@@ -4,13 +4,13 @@
 
 $.fn.noClickDelay = function() {
 	var $wrapper = this,
-	 	$target = this,
-	 	moved = false;
+		$target = this,
+		moved = false;
 	$wrapper.bind('touchstart mousedown', function(e) {
 		e.preventDefault();
 		moved = false;
 		$target = $(e.target);
-		if ($target.nodeType == 3) {
+		if($target.nodeType == 3) {
 			$target = $($target.parent());
 		}
 		$target.addClass('pressed');
@@ -21,7 +21,7 @@ $.fn.noClickDelay = function() {
 		$wrapper.bind('touchend mouseup', function(e) {
 			$wrapper.unbind('mousemove touchmove');
 			$wrapper.unbind('mouseup touchend');
-			if (!moved && $target.length) {
+			if(!moved && $target.length) {
 				$target.removeClass('pressed');
 				$target.trigger('click');
 				$target.focus();

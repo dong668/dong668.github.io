@@ -257,7 +257,6 @@
 				this._trigger('pageShow', this.activePage);
 			}
 
-
 		},
 		_trigger: function(eventType, page) {
 			var eventCallbacks = 'on' + eventType.charAt(0).toUpperCase() + eventType.slice(1) + 'Callbacks';
@@ -581,7 +580,6 @@
 					activePage.classList.add(CLASS_PAGE_LEFT);
 				}
 
-
 				nextPage.style.webkitTransform = 'translate3d(100%,0,0)';
 				this._appendPage(nextPage);
 				nextPage.appendChild(this.shadow); //shadow
@@ -610,7 +608,6 @@
 		}
 
 	});
-
 
 	$.fn.view = function(options) {
 		var self = this[0];

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>员工端－支付成功</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript">
+			window.order = null;
+
+			function plusReady() {
+				document.getElementById('backIndex').addEventListener('tap', function() {
+					mui.back();
+				});
+				var paySuccess = plus.webview.getWebviewById('paySuccess');
+				order = paySuccess.order;
+				$('#barcode').html('订单' + order.barcode + '已经完成');
+				$('#paysum').html(order.pay_sum);
+			}
+			if(window.plus) {
+				plusReady();
+			} else {
+				document.addEventListener("plusready", plusReady, false);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="ygpaySucceed">
+			<header class="loginHeader" style="line-height:0.44rem;">支付成功</header>
+			<div class="commitSucceedyg">
+				<i class="commitSucceedygCon"></i>
+			</div>
+			<p>支付成功</p>
+			<p id="barcode"></p>
+			<div class="payOrderyg">
+				<span class=""></span>
+				<p>订单金额</p>
+				<span class=""></span>
+			</div>
+			<div class="payMoneyyg">
+				<span>¥</span>
+				<b id="paysum"></b>
+			</div>
+			<div id="backIndex" class="backIndex">
+				<a href="javascript:;">返回</a>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + "px";
+</script>

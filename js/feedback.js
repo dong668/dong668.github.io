@@ -11,7 +11,6 @@
 	var LOCAL_STORE_KEY = 'mui://user';
 	var USER_PREFIX = 'mui-user-';
 
-
 	/**
 	 * 生成一个 IM 用户名
 	 **/
@@ -115,4 +114,5 @@
 		});
 	};
 
-})(mui, window.feedback = {}, window, document);
+})(mui, window.feedback = {},
+	window, document);

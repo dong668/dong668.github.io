@@ -33,7 +33,7 @@ header {
 	font-size: 20px;
 	text-align: center;
 	line-height: 44px;
-	background: #fff;
+	background: #042936;
 	z-index: 9999;
 	border-bottom: 1px solid rgba(204, 204, 204, 0.8);
 	-ms-touch-action: none;
@@ -80,6 +80,7 @@ header {
 }
 
 .dcontent {
+	text-align: center;
 	padding-top: 44px;
 	padding-bottom: 80px;
 }
@@ -114,42 +115,6 @@ header {
 	text-align: center;
 }
 
-.buttonbig {
-	height: 50px;
-	width: 90%;
-	font-size: 20px;
-	font-weight: normal;
-	text-align: center;
-	color: #FFF;
-	background-color: #06a863;
-	padding: .5em 0em;
-	margin: .5em .7em;
-	outline: none;
-	-webkit-appearance: none;
-	border: none;
-	border-radius: 5px;
-}
-
-.buttonbig:active {
-	outline: 0;
-	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-.buttonbig-waring {
-	color: #666;
-	background-color: #06a863;
-	border-color: #06a863;
-}
-
-.buttonbig-select {
-	font-size: 14px;
-	background-color: #06a863;
-	border: 0;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-}
-
 .button {
 	font-size: 18px;
 	font-weight: normal;
@@ -166,6 +131,46 @@ header {
 	margin: .5em .7em;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+}
+
+.buttonlogin {
+	align-content: center;
+	height: 50px;
+	width: 90%;
+	font-size: 20px;
+	font-weight: normal;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #FFF;
+	background-color: #06a863;
+	padding: .5em 0em;
+	margin: .5em .7em;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.buttonlogin:active {
+	outline: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.buttonlogin-waring {
+	color: #666;
+	background-color: #06a863;
+	border-color: #06a863;
+}
+
+.buttonlogin-select {
+	font-size: 14px;
+	background-color: #06a863;
+	border: 0;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
 }
 
 .button:active {
@@ -268,17 +273,17 @@ header {
 }
 
 .phoneCode {
-	display: inline;
-	float: right;
-	padding: .3em .0em;
+	padding: .5em 0em;
 	margin: .5em .7em;
 	background: #06a863;
 	color: white;
 	text-align: center;
-	height: 20px;
-	width: 30%;
+	height: 18px;
+	width: 120px;
 	display: inline-block;
 	border-radius: 6px;
+	margin-right: 13px;
+	margin-left: 50px
 }
 
 .phoneCode:active {
@@ -303,8 +308,4 @@ header {
 
 input:focus {
 	border: 1px #00ffffff;
-}
-
-.money {
-	color: #0259C4;
 }

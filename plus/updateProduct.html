@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>员工端－保养订单详情修改商品</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link id="android" rel="stylesheet" type="text/css" charset="utf-8" href='../css/style.css' />
+
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../utilsJs/constant.js"></script>
+		<script type="text/javascript" src="../utilsJs/map.js"></script>
+		<script type="text/javascript" src="../utilsJs/httpUtils.js"></script>
+		<script type="text/javascript" src="../utilsJs/sha1.js"></script>
+		<script type="text/javascript" src="../utilsJs/utils.js"></script>
+		<script type="text/javascript" src="../utilsJs/dpHttp.js"></script>
+		<script type="text/javascript" src="../utilsJs/push.js"></script>
+
+		<script type="text/javascript">
+			window.dpHttp = null;
+			window.utilsJs = null;
+			window.order = null;
+			window.product_items = null;
+			window.httpUtils = new HttpUtils({
+				host: "http://addev.mimixiche.cn"
+			});
+
+			if(window.plus) {
+				plusReady();
+			} else {
+				document.addEventListener("plusready", plusReady, false);
+			}
+
+			function plusReady() {
+				switch(plus.os.name) {
+					case "Android":
+						$('#android').attr('href', '../css/style.css');
+						break;
+					case "iOS":
+						$('#android').attr('href', '../css/ios.css');
+						break;
+				}
+				document.getElementById('closeWin').addEventListener('tap', function() {
+					mui.back();
+				});
+				utilsJs = new Utils();
+				dpHttp = new DpHttp(utilsJs, httpUtils);
+				// 查找应用首页窗口对象
+				var updateProduct = plus.webview.getWebviewById('updateProduct');
+				order = updateProduct.order;
+				product_items = order.product_items;
+				document.getElementById("addNewGoods").addEventListener('tap', function() {
+					newProducts();
+				});
+				document.getElementById('saveProducts').addEventListener('tap', function() {
+					var productItems = $('.changesGoodsContentTop').children('div.goodsList');
+					if(productItems.length > 0) {
+						var param = new Array();
+						for(var i = 0, len = productItems.length; i < len; i++) {
+							var productsMap = new Map();
+							var item = productItems[i].children[1].children;
+							for(var a = 0, alen = productItems[i].children[1].children.length; a < alen; a++) {
+								switch(a) {
+									case 0:
+										productsMap.put('products[' + i + '][name]', item[a].children[0].value);
+										break;
+									case 1:
+										productsMap.put('products[' + i + '][quantity]', item[a].children[0].value);
+										break;
+									case 2:
+										productsMap.put('products[' + i + '][accessories_price]', item[a].children[0].value);
+										break;
+									case 3:
+										productsMap.put('products[' + i + '][accessories_cost]', item[a].children[0].value);
+										break;
+									case 4:
+										productsMap.put('products[' + i + '][labor_price]', item[a].children[0].value);
+										break;
+									case 5:
+										productsMap.put('products[' + i + '][labor_cost]', item[a].children[0].value);
+										break;
+								}
+							}
+							param.push(productsMap);
+						}
+						dpHttp.changeOrderInfoProducts(order._id, param, function() {
+							saveProducts();
+						}, function() {
+
+						});
+					}
+				});
+				initOrder();
+			}
+
+			function saveProducts() {
+				ApiConfig.staticShowToast('编辑商品成功');
+				var orderList = plus.webview.getWebviewById('orderList');
+				mui.fire(orderList, 'Refresh');
+				var orderDetail = plus.webview.getWebviewById('orderDetail');
+				mui.fire(orderDetail, 'refreshOrderInfo');
+				mui.back();
+			}
+
+			function initOrder() {
+				if(order.is_hide_price) {
+					if(order.is_hide_price == 1) {
+						newProducts();
+					}
+				} else {
+					for(index in product_items) {
+						if("receiving_car_service" == product_items[index].product.alias) {
+							product_items.splice(index, 1);
+						}
+					}
+					initProduct_items(product_items);
+				}
+			}
+
+			function initProduct_items(products) {
+				for(index in products) {
+					var changesGoodsContentTop = $('.changesGoodsContentTop');
+					var div = document.createElement('div');
+					var h3 = document.createElement('h3');
+					var ul = document.createElement('ul');
+					var productName = document.createElement('li');
+					var productSum = document.createElement('li');
+					var accessories_price = document.createElement('li');
+					var accessories_cost = document.createElement('li');
+					var labor_price = document.createElement('li');
+					var labor_cost = document.createElement('li');
+					div.className = 'goodsList';
+					ul.className = 'goodsListRight right';
+					h3.className = 'goodsListLeft left';
+					h3.id = 'delete';
+					productName.style.padding = '0';
+
+					h3.addEventListener('tap', function() {
+						document.getElementById('delete').parentNode.remove()
+					});
+					h3.innerHTML = '<p>－</p>';
+					productName.innerHTML = '<input type="text" name="" value=' + products[index].product.name + '>';
+					productSum.innerHTML = '<input type="number" name="" value=' + products[index].quantity + '>';
+					accessories_price.innerHTML = '<input type="number" name="" value=' + products[index].accessories_price + '>';
+					accessories_cost.innerHTML = '<input type="number" name="" value=' + products[index].accessories_cost + '>';
+					labor_price.innerHTML = '<input type="number" name="" value=' + products[index].labor_price + '>';
+					labor_cost.innerHTML = '<input type="number" name="" value=' + products[index].labor_cost + '>';
+
+					ul.appendChild(productName);
+					ul.appendChild(productSum);
+					ul.appendChild(accessories_price);
+					ul.appendChild(accessories_cost);
+					ul.appendChild(labor_price);
+					ul.appendChild(labor_cost);
+
+					div.appendChild(h3);
+					div.appendChild(ul);
+					changesGoodsContentTop.append(div);
+				}
+
+			}
+
+			function newProducts() {
+				var changesGoodsContentTop = $('.changesGoodsContentTop');
+				var div = document.createElement('div');
+				var h3 = document.createElement('h3');
+				var ul = document.createElement('ul');
+				var productName = document.createElement('li');
+				var productSum = document.createElement('li');
+				var accessories_price = document.createElement('li');
+				var accessories_cost = document.createElement('li');
+				var labor_price = document.createElement('li');
+				var labor_cost = document.createElement('li');
+				div.className = 'goodsList';
+				ul.className = 'goodsListRight right';
+				h3.className = 'goodsListLeft left';
+				h3.id = 'delete';
+				productName.style.padding = '0';
+
+				h3.addEventListener('tap', function() {
+					document.getElementById('delete').parentNode.remove()
+				});
+				h3.innerHTML = '<p>－</p>';
+				productName.innerHTML = '<input type="text" value="保养项目">';
+				productSum.innerHTML = '<input type="number">';
+				accessories_price.innerHTML = '<input type="number">';
+				accessories_cost.innerHTML = '<input type="number">';
+				labor_price.innerHTML = '<input type="number">';
+				labor_cost.innerHTML = '<input type="number">';
+
+				ul.appendChild(productName);
+				ul.appendChild(productSum);
+				ul.appendChild(accessories_price);
+				ul.appendChild(accessories_cost);
+				ul.appendChild(labor_price);
+				ul.appendChild(labor_cost);
+
+				div.appendChild(h3);
+				div.appendChild(ul);
+				changesGoodsContentTop.append(div);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="bpOrderDetails" style="padding-bottom:0.68rem;background-color:#f6f6f8;">
+			<header class="loginHeader" style="line-height:0.44rem;text-align:left;">
+				<i class="left bpdetails" id="closeWin"></i>
+				<b style="font-weight:normal;margin-right:0.9rem;" class="left" onclick="mui.back()">返回</b> 更改商品
+				<b id='saveProducts' style="font-weight:normal;margin-right:0.1rem;" class="right">保存</b>
+			</header>
+			<div class="changesGoodsContent">
+				<div class="changesGoodsContentTop">
+					<div class="goodsListFirst">
+						<h3 class="goodsListFirstLeft left"></h3>
+						<ul class="goodsListFirstRight right">
+							<li>项目名称</li>
+							<li>数量</li>
+							<li>配件原价</li>
+							<li>配件成本</li>
+							<li>工时报价</li>
+							<li>工时成本</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<span id="addNewGoods" class="addNewGoods">添加商品</span>
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript">
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + "px";
+</script>

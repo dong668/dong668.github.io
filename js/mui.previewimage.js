@@ -127,7 +127,6 @@
 		}
 	};
 
-
 	proto.empty = function() {
 		this.scroller.innerHTML = '';
 	};
@@ -362,7 +361,7 @@
 			$(zoomers[i]).zoom().destroy();
 		}
 		$(this.element).slider().destroy();
-//		this.empty();
+		//		this.empty();
 	};
 	proto.isShown = function() {
 		return this.element.classList.contains($.className('preview-in'));

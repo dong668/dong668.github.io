@@ -12,9 +12,11 @@
 	function plusReady() {
 		ws = plus.webview.currentWebview();
 		// Android处理返回键
-		plus.key.addEventListener('backbutton', function() {
-			back();
-		}, false);
+		plus.key.addEventListener('backbutton',
+			function() {
+				back();
+			},
+			false);
 		compatibleAdjust();
 	}
 	if (w.plus) {
@@ -24,12 +26,14 @@
 	}
 	// DOMContentLoaded事件处理
 	var domready = false;
-	document.addEventListener('DOMContentLoaded', function() {
-		domready = true;
-		gInit();
-		document.body.onselectstart = shield;
-		compatibleAdjust();
-	}, false);
+	document.addEventListener('DOMContentLoaded',
+		function() {
+			domready = true;
+			gInit();
+			document.body.onselectstart = shield;
+			compatibleAdjust();
+		},
+		false);
 	// 处理返回事件
 	w.back = function(hide) {
 		if (w.plus) {
@@ -66,15 +70,19 @@
 			ws.scalable || (ws.scalable = false);
 			var pre = ''; //'http://192.168.1.178:8080/h5/';
 			openw = plus.webview.create(pre + id, id, ws);
-			ns || openw.addEventListener('loaded', function() { //页面加载完成后才显示
-				//		setTimeout(function(){//延后显示可避免低端机上动画时白屏
-				openw.show(as);
-				closeWaiting();
-				//		},200);
-			}, false);
-			openw.addEventListener('close', function() { //页面关闭后可再次打开
-				openw = null;
-			}, false);
+			ns || openw.addEventListener('loaded',
+				function() { //页面加载完成后才显示
+					//		setTimeout(function(){//延后显示可避免低端机上动画时白屏
+					openw.show(as);
+					closeWaiting();
+					//		},200);
+				},
+				false);
+			openw.addEventListener('close',
+				function() { //页面关闭后可再次打开
+					openw = null;
+				},
+				false);
 			return openw;
 		} else {
 			w.open(id);
@@ -92,9 +100,11 @@
 				}, {
 					preate: true
 				});
-				d.addEventListener('loaded', function() {
-					d.evalJS('updateDoc("' + t + '","' + c + '")');
-				}, false);
+				d.addEventListener('loaded',
+					function() {
+						d.evalJS('updateDoc("' + t + '","' + c + '")');
+					},
+					false);
 			}
 		}
 		/**
@@ -118,23 +128,27 @@
 			t && (t.className = "scontent");
 			//iOS8横竖屏切换div不更新滚动问题
 			var lasto = window.orientation;
-			window.addEventListener("orientationchange", function() {
-				var nowo = window.orientation;
-				if (lasto != nowo && (90 == nowo || -90 == nowo)) {
-					dcontent && (0 == dcontent.scrollTop) && (dcontent.scrollTop = 1);
-					content && (0 == content.scrollTop) && (content.scrollTop = 1);
-				}
-				lasto = nowo;
-			}, false);
+			window.addEventListener("orientationchange",
+				function() {
+					var nowo = window.orientation;
+					if (lasto != nowo && (90 == nowo || -90 == nowo)) {
+						dcontent && (0 == dcontent.scrollTop) && (dcontent.scrollTop = 1);
+						content && (0 == content.scrollTop) && (content.scrollTop = 1);
+					}
+					lasto = nowo;
+				},
+				false);
 		}
 		adjust = true;
 	};
 	w.compatibleConfirm = function() {
-			plus.nativeUI.confirm('本OS原生层面不提供该控件，需使用mui框架实现类似效果。请点击“确定”下载Hello mui示例', function(e) {
-				if (0 == e.index) {
-					plus.runtime.openURL("http://www.dcloud.io/hellomui/");
-				}
-			}, "", ["确定", "取消"]);
+			plus.nativeUI.confirm('本OS原生层面不提供该控件，需使用mui框架实现类似效果。请点击“确定”下载Hello mui示例',
+				function(e) {
+					if (0 == e.index) {
+						plus.runtime.openURL("http://www.dcloud.io/hellomui/");
+					}
+				},
+				"", ["确定", "取消"]);
 		}
 		// 通用元素对象
 	var _dout_ = null,

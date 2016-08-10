@@ -1,139 +1,287 @@
 {
 	"index.html": {
-		"href": "index.html",
-		"priority": 0,
 		"resources": [
-			"css/common.css",
-			"js/update.js",
-			"js/shortcut.js",
-			"js/immersed.js",
+			"utilsJs/map.js",
+			"images/bg-min.png",
+			"utilsJs/utils.js",
+			"images/ico_phone.png",
 			"js/common.js",
-			"img/mimi/ico_code.png",
-			"img/mimi/logo.png",
-			"img/mimi/ico_phone.png",
-			"plus/order_detail.html",
-			"img/IMG_20160323_181037.jpg",
-			"js/utils.js",
-			"js/sha1.js",
+			"utilsJs/httpUtils.js",
+			"images/logo-akmimi.png",
+			"utilsJs/sha1.js",
+			"css/style.css",
+			"images/ico_psw.png",
+			"js/immersed.js",
+			"utilsJs/constant.js",
 			"js/mui.min.js",
 			"fonts/mui.ttf",
 			"css/mui.min.css",
+			"js/update.js",
+			"css/common.css",
+			"utilsJs/dpHttp.js",
+			"js/jquery-1.11.0.js",
+			"js/shortcut.js",
+			"utilsJs/websql.js"
+		],
+		"refer": [
+			"plus/main.html"
+		]
+	},
+	"plus/main.html": {
+		"resources": [
+			"images/ico_location.png",
+			"images/ico_image.png",
+			"images/ico_news.png",
+			"js/jquery-1.11.0.js",
+			"js/mui.min.js",
+			"css/app.css",
+			"css/mui.min.css",
+			"images/ico_user.png",
 			"utilsJs/utils.js",
 			"utilsJs/httpUtils.js",
 			"utilsJs/sha1.js",
-			"utilsJs/map.js"
+			"css/style.css",
+			"js/immersed.js",
+			"utilsJs/constant.js",
+			"utilsJs/map.js",
+			"js/common.js",
+			"js/mui.lazyload.js",
+			"js/mui.lazyload.img.js",
+			"plus/pullrefresh_sub.html",
+			"plus/orderList.html",
+			"fonts/mui.ttf",
+			"utilsJs/dpHttp.js",
+			"utilsJs/layer.js",
+			"images/ico_close.png",
+			"utilsJs/push.js",
+			"js/shortcut.js",
+			"utilsJs/showView.js",
+			"utilsJs/websql.js"
 		],
 		"refer": [
-			"plus/order_detail.html",
-			"plus/barcode_scan.html",
-			"plus/pay.html",
-			"plus/upload.html",
+			"plus/pullrefresh_sub.html",
+			"plus/orderList.html",
+			"plus/orderDetail.html",
 			"plus/test.html",
-			"plus/login.html",
-			"plus/bie.html",
-			"plus/list.html"
+			"plus/message.html",
+			"plus/paySuccess.html"
 		]
 	},
-	"plus/barcode_scan.html": {
+	"plus/pullrefresh_sub.html": {
 		"resources": [
-			"js/common.js",
-			"css/common.css"
+			"js/jquery-1.11.0.js",
+			"css/app.css",
+			"js/mui.lazyload.js",
+			"js/mui.lazyload.img.js"
 		]
 	},
-	"plus/order_detail.html": {
+	"plus/orderList.html": {
 		"resources": [
-			"js/common.js",
-			"css/common.css",
-			"js/immersed.js"
-		]
-	},
-	"plus/pay.html": {
-		"resources": [
-			"js/common.js",
-			"css/common.css",
+			"js/jquery-1.11.0.js",
+			"css/app.css",
+			"js/mui.lazyload.js",
+			"js/mui.lazyload.img.js",
+			"utilsJs/utils.js",
+			"images/ico_location.png",
+			"images/ico_image.png",
+			"images/ico_news.png",
+			"utilsJs/httpUtils.js",
+			"utilsJs/sha1.js",
+			"css/style.css",
+			"utilsJs/constant.js",
+			"utilsJs/map.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/ico_user.png",
+			"fonts/mui.ttf",
+			"utilsJs/main.js",
 			"js/immersed.js",
-			"js/sha1.js",
-			"js/signature.js"
-		]
-	},
-	"plus/upload.html": {
-		"resources": [
 			"js/common.js",
-			"css/common.css",
-			"js/immersed.js",
-			"js/sha1.js",
-			"js/signature.js",
-			"js/utils.js"
+			"utilsJs/dpHttp.js",
+			"utilsJs/layer.js",
+			"images/ico_close.png",
+			"css/layer.css",
+			"images/ico_noorder.png",
+			"utilsJs/push.js",
+			"utilsJs/showView.js",
+			"utilsJs/orderList.js",
+			"utilsJs/orderListData.js"
 		],
 		"refer": [
-			"plus/uploader_ret.html"
+			"plus/orderDetail.html",
+			"index.html",
+			"plus/pushOrderDetail.html",
+			"plus/orderDetailHead.html",
+			"plus/adfadf.html",
+			"plus/orderDetailhear.html"
 		]
 	},
-	"plus/uploader_ret.html": {
+	"plus/orderDetail.html": {
 		"resources": [
-			"js/common.js",
+			"images/BackArrow.png",
+			"images/ico_order_edit.png",
+			"images/ico_code.png",
+			"css/style.css",
+			"js/jquery-1.11.0.js",
+			"utilsJs/constant.js",
 			"css/common.css",
-			"js/immersed.js"
+			"js/common.js",
+			"utilsJs/map.js",
+			"utilsJs/utils.js",
+			"utilsJs/httpUtils.js",
+			"utilsJs/sha1.js",
+			"utilsJs/showView.js",
+			"images/ico_edit.png",
+			"images/ico_close.png",
+			"images/logo_wxpay.png",
+			"images/ewm1.png",
+			"images/pic_wx.png",
+			"js/mui.min.js",
+			"css/layer.css",
+			"utilsJs/layer.js",
+			"utilsJs/jquery.qrcode.min.js",
+			"utilsJs/dpHttp.js",
+			"utilsJs/push.js",
+			"css/app.css"
+		],
+		"refer": [
+			"plus/updateProduct.html",
+			"plus/pushOrderDetail.html",
+			"plus/paySuccess.html",
+			"index.html"
+		]
+	},
+	"plus/updateProduct.html": {
+		"resources": [
+			"images/BackArrow.png",
+			"js/jquery-1.11.0.js",
+			"css/style.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"utilsJs/utils.js",
+			"utilsJs/httpUtils.js",
+			"utilsJs/dpHttp.js",
+			"utilsJs/map.js",
+			"utilsJs/sha1.js",
+			"utilsJs/constant.js",
+			"utilsJs/push.js"
+		]
+	},
+	"plus/pushOrderDetail.html": {
+		"resources": [
+			"css/layer.css",
+			"utilsJs/push.js",
+			"utilsJs/jquery.qrcode.min.js",
+			"utilsJs/utils.js",
+			"utilsJs/httpUtils.js",
+			"utilsJs/sha1.js",
+			"css/style.css",
+			"utilsJs/layer.js",
+			"utilsJs/constant.js",
+			"utilsJs/showView.js",
+			"utilsJs/map.js",
+			"css/common.css",
+			"js/mui.min.js",
+			"js/jquery-1.11.0.js",
+			"utilsJs/dpHttp.js",
+			"images/ico_edit.png",
+			"images/ico_order_edit.png"
+		],
+		"refer": [
+			"plus/updateProduct.html"
+		]
+	},
+	"plus/paySuccess.html": {
+		"resources": [
+			"images/commit-successed.png",
+			"js/jquery-1.11.0.js",
+			"css/style.css",
+			"js/mui.min.js"
 		]
 	},
 	"plus/test.html": {
 		"resources": [
-			"js/JIC.js",
-			"js/jquery-1.11.0.js"
-		]
-	},
-	"plus/login.html": {
-		"resources": [
-			"js/sha1.js",
-			"js/signature.js",
-			"js/common.js",
-			"css/common.css",
-			"js/immersed.js",
-			"js/utils.js",
-			"plus/login.html"
-		]
-	},
-	"plus/list.html": {
-		"resources": [
+			"css/layer.css",
+			"utilsJs/push.js",
+			"utilsJs/utils.js",
+			"images/ico_location.png",
+			"images/ico_news.png",
+			"images/ico_noorder.png",
+			"utilsJs/httpUtils.js",
+			"fonts/mui.ttf",
+			"utilsJs/sha1.js",
+			"css/style.css",
+			"utilsJs/layer.js",
+			"utilsJs/showView.js",
+			"utilsJs/constant.js",
+			"utilsJs/map.js",
+			"js/jquery-1.11.0.js",
 			"js/mui.min.js",
 			"css/mui.min.css",
+			"utilsJs/dpHttp.js",
+			"images/ico_user.png"
+		]
+	},
+	"plus/message.html": {
+		"resources": [
+			"images/BackArrow.png",
+			"images/ico-creditcard@2x.png"
+		]
+	},
+	"plus/orderDetailHead.html": {
+		"resources": [
+			"plus/orderDetail.html",
+			"js/mui.min.js",
+			"js/jquery-1.11.0.js",
+			"css/mui.min.css",
+			"css/style.css"
+		],
+		"refer": [
+			"plus/orderDetail.html"
+		]
+	},
+	"plus/adfadf.html": {
+		"resources": [
+			"plus/orderDetail.html",
+			"js/mui.min.js",
+			"js/jquery-1.11.0.js",
+			"css/mui.min.css",
+			"css/style.css",
+			"fonts/mui.ttf",
+			"utilsJs/utils.js",
+			"utilsJs/jquery.qrcode.min.js",
+			"utilsJs/httpUtils.js",
+			"utilsJs/sha1.js",
+			"utilsJs/layer.js",
+			"utilsJs/showView.js",
+			"utilsJs/map.js",
+			"utilsJs/dpHttp.js"
+		],
+		"refer": [
+			"plus/orderDetail.html"
+		]
+	},
+	"plus/orderDetailhear.html": {
+		"resources": [
+			"utilsJs/jquery.qrcode.min.js",
+			"plus/orderDetail.html",
+			"utilsJs/map.js",
+			"utilsJs/utils.js",
+			"utilsJs/httpUtils.js",
+			"js/mui.min.js",
+			"js/jquery-1.11.0.js",
+			"utilsJs/dpHttp.js",
+			"utilsJs/sha1.js",
+			"css/mui.min.css",
+			"utilsJs/layer.js",
+			"css/style.css",
+			"utilsJs/showView.js",
+			"css/layer.css",
+			"css/common.css",
 			"fonts/mui.ttf"
 		],
 		"refer": [
-			"examples/pullrefresh_main.html",
-			"examples/pullrefresh_with_tab.html"
-		]
-	},
-	"examples/pullrefresh_sub.html": {
-		"resources": [
-			"js/jquery-1.11.0.js",
-			"css/app.css",
-			"images/60x60.gif",
-			"js/mui.lazyload.js",
-			"js/mui.lazyload.img.js",
-			"js/utils.js",
-			"js/mui.min.js",
-			"fonts/mui.ttf",
-			"css/mui.min.css"
-		]
-	},
-	"examples/pullrefresh_main.html": {
-		"resources": [
-			"examples/pullrefresh_sub.html",
-			"fonts/mui.ttf",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"examples/pullrefresh_sub.html"
-		]
-	},
-	"examples/pullrefresh_with_tab.html": {
-		"resources": [
-			"js/mui.pullToRefresh.js",
-			"js/mui.min.js",
-			"js/mui.pullToRefresh.material.js",
-			"css/mui.min.css"
+			"plus/orderDetail.html"
 		]
 	}
 }

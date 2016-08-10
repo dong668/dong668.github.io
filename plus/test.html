@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>File API Test</title>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/JIC.js"></script>
+		<style>
+			#test {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="file" id="fileImg">
+		<form>
+			<img src="" id="test" alt="">
+		</form>
+		<script>
+			function handleFileSelect(evt) {
+				// var filebtn = document.getElementById(id);
+				// console.log(filebtn);
+				// var files = filebtn.target.files;
+				// console.log(filebtn.target);
+				// console.log(files);
+				var files = evt.target.files;
+				for (var i = 0, f; f = files[i]; i++) {
+					// Only process image files.
+					if (!f.type.match('image.*')) {
+						continue;
+					}
+					var reader = new FileReader();
+					// Closure to capture the file information.
+					reader.onload = (function(theFile) {
+						return function(e) {
+							// Render thumbnail.
+							// console.log(evt.target.files[0]);
+							// console.log(e.target);
+							//							console.log(e.target.result);
+							var i = document.getElementById("test");
+							i.src = event.target.result;
+							//							console.log($(i).width());
+							//							console.log($(i).height());
+							$(i).css('width', $(i).width() / 10 + 'px');
+							//$(i).css('height',$(i).height()/10+'px');
+							//							console.log($(i).width());
+							//							console.log($(i).height());
+							var quality = 50;
+							i.src = jic.compress(i, quality).src;
+							console.log(i.src);
+							i.style.display = "block";
+						};
+					})(f);
+					// Read in the image file as a data URL.
+					reader.readAsDataURL(f);
+				}
+			}
+			document.getElementById('fileImg').addEventListener('change', handleFileSelect, false);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,139 @@
+{
+	"index.html": {
+		"href": "index.html",
+		"priority": 0,
+		"resources": [
+			"css/common.css",
+			"js/update.js",
+			"js/shortcut.js",
+			"js/immersed.js",
+			"js/common.js",
+			"img/mimi/ico_code.png",
+			"img/mimi/logo.png",
+			"img/mimi/ico_phone.png",
+			"plus/order_detail.html",
+			"img/IMG_20160323_181037.jpg",
+			"js/utils.js",
+			"js/sha1.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"utilsJs/utils.js",
+			"utilsJs/httpUtils.js",
+			"utilsJs/sha1.js",
+			"utilsJs/map.js"
+		],
+		"refer": [
+			"plus/order_detail.html",
+			"plus/barcode_scan.html",
+			"plus/pay.html",
+			"plus/upload.html",
+			"plus/test.html",
+			"plus/login.html",
+			"plus/bie.html",
+			"plus/list.html"
+		]
+	},
+	"plus/barcode_scan.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css"
+		]
+	},
+	"plus/order_detail.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css",
+			"js/immersed.js"
+		]
+	},
+	"plus/pay.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css",
+			"js/immersed.js",
+			"js/sha1.js",
+			"js/signature.js"
+		]
+	},
+	"plus/upload.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css",
+			"js/immersed.js",
+			"js/sha1.js",
+			"js/signature.js",
+			"js/utils.js"
+		],
+		"refer": [
+			"plus/uploader_ret.html"
+		]
+	},
+	"plus/uploader_ret.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css",
+			"js/immersed.js"
+		]
+	},
+	"plus/test.html": {
+		"resources": [
+			"js/JIC.js",
+			"js/jquery-1.11.0.js"
+		]
+	},
+	"plus/login.html": {
+		"resources": [
+			"js/sha1.js",
+			"js/signature.js",
+			"js/common.js",
+			"css/common.css",
+			"js/immersed.js",
+			"js/utils.js",
+			"plus/login.html"
+		]
+	},
+	"plus/list.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"examples/pullrefresh_main.html",
+			"examples/pullrefresh_with_tab.html"
+		]
+	},
+	"examples/pullrefresh_sub.html": {
+		"resources": [
+			"js/jquery-1.11.0.js",
+			"css/app.css",
+			"images/60x60.gif",
+			"js/mui.lazyload.js",
+			"js/mui.lazyload.img.js",
+			"js/utils.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"examples/pullrefresh_main.html": {
+		"resources": [
+			"examples/pullrefresh_sub.html",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"examples/pullrefresh_sub.html"
+		]
+	},
+	"examples/pullrefresh_with_tab.html": {
+		"resources": [
+			"js/mui.pullToRefresh.js",
+			"js/mui.min.js",
+			"js/mui.pullToRefresh.material.js",
+			"css/mui.min.css"
+		]
+	}
+}
